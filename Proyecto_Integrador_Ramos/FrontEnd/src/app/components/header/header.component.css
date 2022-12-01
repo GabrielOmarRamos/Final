@@ -1,0 +1,47 @@
+@media (min-width: 913px){
+    div{    
+        position: relative;
+        animation: fadein 1.5s ease-out 0s;
+        width: 100%;
+        height: 85ex;
+        background: center/cover url(https://firebasestorage.googleapis.com/v0/b/frontendgabrielramos.appspot.com/o/imagenes%2FPortada_1?alt=media&token=bc3aff26-7596-4cb1-a9aa-45bf0e62eac7);
+        background-attachment: fixed;
+        }
+    
+}
+
+@media (max-width: 912px){
+    div{        
+        position: relative;    
+        animation: fadein 1.5s ease-out 0s;
+        width: 100%;
+        height: 650px;
+        bottom: 10px;
+        background: left/cover url(https://firebasestorage.googleapis.com/v0/b/frontendgabrielramos.appspot.com/o/imagenes%2FPortada_1?alt=media&token=bc3aff26-7596-4cb1-a9aa-45bf0e62eac7);
+        background-attachment: fixed;
+        }
+}
+
+
+app-socialmedia{
+    float: right;
+    margin: 30px 30px 0 0;
+}
+
+
+@keyframes fadein {
+    0%{
+        opacity: 0;
+        filter: blur(1.5rem);
+    }
+    50%{
+        opacity: .5;
+        filter: blur(0.5rem);
+    }
+    100%{
+        opacity: 1;
+        filter: blur(0rem);
+    }
+    
+
+}

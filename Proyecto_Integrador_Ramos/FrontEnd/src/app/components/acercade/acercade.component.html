@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
+        <img src="https://firebasestorage.googleapis.com/v0/b/frontendgabrielramos.appspot.com/o/imagenes%2FPerfil_1?alt=media&token=228499dc-a4fe-42e5-8513-daaa9740ef05" class="img-fluid" id="profile">
+    </div>
+    <div class="col-xs-12 col-sm-7 col-md-8 col-lg-9" id="name">
+        <h1>{{persona.nombre}} {{persona.apellido}}</h1>
+        <h3>Full Stack Developer Jr.</h3>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <span>
+            <h1>Sobre mí</h1>
+            <p>{{persona.descripcion}}</p>
+        </span>
+    </div>
+    <div id="B-Add" class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/editacercade/1" *ngIf="isLogged">
+            Editar Persona
+        </button>
+    </div>
+</div>

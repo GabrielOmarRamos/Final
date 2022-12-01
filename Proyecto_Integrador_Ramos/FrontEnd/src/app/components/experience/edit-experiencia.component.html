@@ -1,0 +1,32 @@
+<div class="container" *ngIf="expLab">
+    <h1>Experiencia Laboral</h1>
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreE"><h4>Nombre del puesto</h4></label>
+                    <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="expLab.nombreE" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcionE"><h4>Descripción de la tarea</h4></label>
+                    <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="expLab.descripcionE" required>
+                </div>
+                <div class="form-group">
+                    <label for="tiempoE"><h4>Tiempo en la empresa</h4></label>
+                    <input type="text" class="form-control" id="tiempoE" name="tiempoE" [(ngModel)]="expLab.tiempoE" required>
+                </div>
+                <div class="form-group">
+                    <label for="empresaE"><h4>Nombre de la empresa</h4></label>
+                    <input type="text" class="form-control" id="empresaE" name="empresaE" [(ngModel)]="expLab.empresaE" required>
+                </div>
+                <div class="form-group">
+                    <label for="imagen"><h4>Imagen</h4></label>
+                    <input type="file" class="form-control" id="imagen" name="imagen" (change)="uploadImg($event)" accept=".jpg, .jpeg, .png, .gif">
+                </div>
+                <button type="submit" id="boton" class="btn btn-dark btn-block mb-3">
+                    Editar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+#APLogo{
+    width: 135px;
+    margin: 15px 0px 0px 30px;
+}
+
+@media (max-width: 414px){
+    #APLogo{
+        width: 115px;
+        margin: 15px 0px 0px 30px;
+    }
+}

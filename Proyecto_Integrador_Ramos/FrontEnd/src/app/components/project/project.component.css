@@ -1,0 +1,33 @@
+.row{
+    padding: 50px;
+}
+
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contenedor{
+    padding-top: 50px;
+    width: auto;
+}
+
+.texto, .imagen{
+    display: inline-block;
+    text-align: justify;
+}
+
+#imagen:hover{
+    transform: scale(1.06);
+    transition: transform .6s;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.384);
+    transition: box-shadow .9s;
+    border-radius: 20px;
+}
+
+#imagen{
+    transform: scale(1);
+    transition: transform .3s;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    transition: box-shadow .5s;
+    border-radius: 20px;
+}

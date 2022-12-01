@@ -1,0 +1,55 @@
+<section class="h-100 gradient-form">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-10">
+          <div class="card rounded-3 text-black">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <div class="card-body p-md-5 mx-md-4">
+  
+                  <div class="text-center">
+                    <img src="../../../assets/Portfolio Logo.png"
+                      style="width: 185px;" id="logo">
+                  </div>
+                  
+                  <p>Ingrese sus datos</p>
+
+                  <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>                    
+  
+                    <div class="form-outline mb-4">
+                      <input type="email" id="nombreUsuario"  placeholder="Email" name="nombreUsuario" class="form-control" [(ngModel)]="nombreUsuario" required/>
+                      <label class="form-label" for="a"></label>
+                    </div>
+  
+                    <div class="form-outline mb-4">
+                      <input type="password" id="password" placeholder="Contraseña" name="password" class="form-control" [(ngModel)]="password" required/>
+                      <label class="form-label" for="b"></label>
+                    </div>
+  
+                    <div class="text-center d-grid gap-2">
+                      <button class="btn btn-dark btn-block mb-3" type="submit" id="boton">Login</button>
+                      <!--<a class="text-muted" href="#!">¿Olvisate tu contraseña?<p></p></a>-->
+                    </div>
+                                  
+                  </form>
+  
+                  <div class="d-flex align-items-center justify-content-center pb-4">
+                    <p class="mb-0 me-2">¿No tenés cuenta?</p>
+                    <button type="button" class="btn btn-outline-dark">Crear cuenta</button>
+                  </div>  
+
+                </div>
+              </div>
+              <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                  <h4 class="mb-4">Portfolio Proyecto de #ArgentinaPrograma</h4>
+                  <p class="small mb-0">Esta página fue creada por Gabriel Ramos con el fin de poner en práctica todos los conocimientos y herramientas brindadas por #argentinaprograma. Espero puedan divertirse editando e inspeccionando todo lo que puedan encontrar en ella. <p> <p>¡Saludos!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

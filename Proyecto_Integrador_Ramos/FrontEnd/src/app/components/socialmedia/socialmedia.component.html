@@ -1,0 +1,7 @@
+<div>
+    <a href="https://www.facebook.com/gabii.prod/"><img src="../../../assets/facebook.png" id="facebook"></a>
+    <a href="https://z-p15.www.instagram.com/gabriel.ramos93/"><img src="../../../assets/instagram.png" id="instagram"></a>
+    <a href="https://www.linkedin.com/in/gabriel-omar-ramos/"><img src="../../../assets/linkedin.png" id="linkedin"></a>
+    <a routerLink="/login"><button type="button" class="btn btn-outline-light" *ngIf="!isLogged">Login</button></a>
+    <a href=""><button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">Logout</button></a>
+</div>

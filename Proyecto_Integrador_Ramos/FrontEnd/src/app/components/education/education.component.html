@@ -1,0 +1,30 @@
+<div>
+    <h2>Educación</h2>    
+    <div class="row" id="Educación1">
+        <table class="table" class="col-sm-11 col-md-8 col-lg-10">
+            <tbody>
+                <tr class="row" *ngFor="let Educacion of educacion">
+                    <td class="col-sm-11 col-md-11 col-lg-2" id="imagen">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/frontendgabrielramos.appspot.com/o/imagenes%2FEdu_{{Educacion.id}}?alt=media&token=6304b7f3-0257-45cf-86d2-5d0183dc53bd" alt="" class="img-fluid">
+                    </td>
+                    <td class="table" class="col-sm-11 col-md-11 col-lg">
+                        <h3>{{Educacion.nombreE}}</h3><br>
+                        <h4>{{Educacion.institucionE}}</h4><br>
+                        <h5>{{Educacion.tiempoE}}</h5>
+
+                        <p>{{Educacion.descripcionE}}</p>
+                    </td>
+                    <td type="button" id="Botones" class="btn btn-primary btn-block mb-3 col-sm-11 col-md-2 col-lg-1"
+                        *ngIf="isLogged" routerLink="/editeducacion/{{Educacion.id}}">Editar</td>
+                    <td type="button" id="Botones" class="btn btn-danger btn-block mb-3 col-sm-11 col-md-2 col-lg-1"
+                        *ngIf="isLogged" (click)="delete(Educacion.id)">Borrar</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="B-Add" class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaeducacion" *ngIf="isLogged">
+            Nueva Educación
+        </button>
+    </div>
+</div>

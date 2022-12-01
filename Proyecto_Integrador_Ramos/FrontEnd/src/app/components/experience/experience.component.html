@@ -1,0 +1,32 @@
+<div>
+    <h2>Experiencia laboral</h2>
+    <div class="row" id="TrabajoX">
+
+        <table class="table" class="col-sm-11 col-md-8 col-lg-10">
+            <tbody>
+                <tr class="row" *ngFor="let Experiencia of expe">
+                    <td class="col-sm-11 col-md-11 col-lg-2" id="imagen">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/frontendgabrielramos.appspot.com/o/imagenes%2FExpe_{{Experiencia.id}}?alt=media&token=3b2f22f7-d917-4af9-a0ef-a5ba9d00d856}"
+                            alt="" class="img-fluid">
+                    </td>
+                    <td class="table" class="col-sm-11 col-md-11 col-lg">
+                        <h3>{{Experiencia.nombreE}}</h3><br>
+                        <h4>{{Experiencia.empresaE}}</h4><br>
+                        <h5>{{Experiencia.tiempoE}}</h5>
+
+                        <p>{{Experiencia.descripcionE}}</p>
+                    </td>
+                    <td type="button" id="Botones" class="btn btn-primary btn-block mb-3 col-sm-11 col-md-2 col-lg-1"
+                        *ngIf="isLogged" routerLink="/editexp/{{Experiencia.id}}">Editar</td>
+                    <td type="button" id="Botones" class="btn btn-danger btn-block mb-3 col-sm-11 col-md-2 col-lg-1"
+                        *ngIf="isLogged" (click)="delete(Experiencia.id)">Borrar</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="B-Add" class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">
+            Nueva Experiencia
+        </button>
+    </div>
+</div>

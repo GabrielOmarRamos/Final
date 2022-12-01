@@ -1,0 +1,32 @@
+<div class="container" *ngIf="persona">
+    <h1>Persona</h1>
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombre"><h4>Nombre</h4></label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="persona.nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido"><h4>Apellido</h4></label>
+                    <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="persona.apellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion"><h4>descripcion</h4></label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="persona.descripcion" required>
+                </div>
+                <div class="form-group">
+                    <label for="imagen"><h4>Foto de perfil</h4></label>
+                    <input type="file" class="form-control" id="imagen" name="imagen" [(ngModel)]="persona.img" (change)="uploadImg1($event)" accept=".jpg, .jpeg, .png, .gif">
+                </div>
+                <div class="form-group">
+                    <label for="imagen"><h4>Foto de portada</h4></label>
+                    <input type="file" class="form-control" id="imagen" name="imagen" [(ngModel)]="persona.img" (change)="uploadImg2($event)" accept=".jpg, .jpeg, .png, .gif">
+                </div>                                
+                <button type="submit" id="boton" class="btn btn-dark btn-block mb-3">
+                    Editar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
